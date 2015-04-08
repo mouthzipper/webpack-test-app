@@ -1,7 +1,11 @@
 'use strict';
 
+require('jquery');
+require('bootstrap');
 require('angular-ui-router');
 require('player-component');
+
+require('./assets/styles/main.less');
 
 angular.element(document).ready(function() {
     var deps = [

@@ -35,6 +35,8 @@
     "karma-chrome-launcher": "^0.1.4",
     "karma-mocha": "^0.1.9",
     "karma-webpack": "^1.2.2",
+    "less": "^2.5.0",
+    "less-loader": "^2.2.0",
     "minimist": "1.1.0",
     "mocha": "^1.21.4",
     "ngmin-webpack-plugin": "^0.1.3",

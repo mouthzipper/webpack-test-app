@@ -28,6 +28,10 @@ module.exports = {
         loaders: ['style', 'css', "sass?includePaths[]=" + styleRoot]
       },
       {
+        test: /\.less$/,
+        loader: 'style!css!less'
+      },
+      {
         test: /\.html$/,
         loader: 'raw'
       },
@@ -57,6 +61,7 @@ module.exports = {
   },
   plugins: [
     new BowerWebpackPlugin({
+      excludes: /.*\.less/,
       searchResolveModulesDirectories: false
     }),
     new webpack.ResolverPlugin([
@@ -65,7 +70,9 @@ module.exports = {
     ], ['normal', 'loader']),
     new webpack.ContextReplacementPlugin(/.*$/, /a^/),
     new webpack.ProvidePlugin({
-      'angular': 'exports?window.angular!bower/angular'
+      angular: 'exports?window.angular!bower/angular',
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
   devtool: 'eval'
