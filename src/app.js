@@ -9,9 +9,9 @@ require('./assets/styles/main.less');
 
 angular.element(document).ready(function() {
     var deps = [
-    'ui.router',
-    'app.component.player'
-  ];
+      'ui.router',
+      'app.component.player'
+    ];
 
   angular.module('app', deps)
     .config([
